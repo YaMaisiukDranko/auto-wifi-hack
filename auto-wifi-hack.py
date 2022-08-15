@@ -14,6 +14,8 @@ def hack():
         os.system('airmon-ng start wlan0')
     except subprocess.SubprocessError:
         print('I have problems with your wifi card')
+    print('Scan wifi stations')
+    os.system('airodump-ng wlan0mon')
 
 
 
