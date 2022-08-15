@@ -10,7 +10,7 @@ def hack():
     os.system('ifconfig')
     try:
         os.system('airmon-ng start wlan0')
-    except Exception:
+    except SystemError:
         print('I have problems with your wifi card')
 
 
