@@ -8,7 +8,12 @@ def hack():
     os.system('airmon-ng check kill')
     print('Checking wifi card')
     os.system('ifconfig')
-    print('Turning on wlan0')
-    os.system('airmon-ng start wlan0')
+    try:
+        os.system('airmon-ng wlan0')
+    except Exception:
+        print('I have problems with your wifi card')
+
+
+
 
 hack()
