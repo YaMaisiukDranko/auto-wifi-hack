@@ -1,5 +1,6 @@
 import os
 import subprocess
+import time
 
 print('auto wifi hack')
 
@@ -16,7 +17,8 @@ def hack():
         print('I have problems with your wifi card')
     print('Scan wifi stations')
     os.system('airodump-ng wlan0mon')
-
+    time.sleep(30)
+    print('Scan finished')
 
 
 
