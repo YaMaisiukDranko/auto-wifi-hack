@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 print('auto wifi hack')
 
 def hack():
@@ -10,7 +12,7 @@ def hack():
     os.system('ifconfig')
     try:
         os.system('airmon-ng start wlan0')
-    except SystemError:
+    except subprocess.SubprocessError:
         print('I have problems with your wifi card')
 
 
